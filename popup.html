@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hide Comment in learncpp.com</title>
+    <script src="popup.js"></script>
+  </head>
+  <style>
+    .tab {
+      background-color: #f1f1f1;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid #ccc;
+      gap: 3px;
+    }
+    .tab div {
+      padding: 10px 20px;
+      cursor: pointer;
+      flex-grow: 1;
+      text-align: center;
+    }
+    .tab .active {
+      color: white;
+      background-color: #007bff;
+    }
+    button {
+      padding: 5px 10px;
+      cursor: pointer;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 3px;
+    }
+  </style>
+  <body>
+    <div
+      id="error-text"
+      style="color: red; margin: 6px 0; min-height: 30px; width: 100%"
+    ></div>
+    <div class="tab">
+      <div class="active" id="main-controller">Main</div>
+      <div id="config-controller">Configuration</div>
+    </div>
+    <div
+      id="main-tab"
+      style="
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 300px;
+        width: 100%;
+        box-sizing: border-box;
+      "
+    >
+      <button style="font-size: 20px; padding: 3%" id="hide-comments">Hide Comments</button>
+    </div>
+    <div id="config-tab" style="padding: 10px">
+      <div
+        data-edit-id=""
+        id="modify-add-config"
+        style="display: flex; flex-direction: column; gap: 12px; display: none"
+      >
+        <h3>Add</h3>
+        <legend style="font-weight: bold; margin-bottom: 6px">
+          Type (Name: hide comment that matches the name exactly, Comment: hide
+          comment that contains the text)
+        </legend>
+        <select name="config-type" style="padding: 12px">
+          <option value="" disabled selected>Select type</option>
+          <option value="name">Name</option>
+          <option value="comment">Comment</option>
+        </select>
+
+        <legend style="font-weight: bold; margin-bottom: 6px">Value</legend>
+        <input
+          name="config-text"
+          type="text"
+          placeholder="Enter value"
+          style="padding: 12px"
+        />
+        <div style="display: flex; gap: 8px">
+          <button id="cancel-config-button" style="padding: 12px; flex-grow: 1">
+            Cancel
+          </button>
+          <button id="save-config-button" style="padding: 12px; flex-grow: 1">
+            Save
+          </button>
+        </div>
+      </div>
+      <div id="config-view-container">
+        <h3 style="display: flex">
+          <span style="flex-grow: 1">Configuration</span> <button id="add-new-config">Add</button>
+        </h3>
+        <div id="config-container"></div>
+        <ul id="config-list" style="list-style: none; padding: 0"></ul>
+      </div>
+    </div>
+  </body>
+</html>
