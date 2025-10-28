@@ -33,7 +33,7 @@
       border-radius: 3px;
     }
   </style>
-  <body>
+  <body style="width: 300px; height: 400px; box-sizing: border-box">
     <div
       id="error-text"
       style="color: red; margin: 6px 0; min-height: 30px; width: 100%"
@@ -49,12 +49,14 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 300px;
+        height: 100%;
         width: 100%;
         box-sizing: border-box;
       "
     >
-      <button style="font-size: 20px; padding: 3%" id="hide-comments">Hide Comments</button>
+      <button style="font-size: 20px; padding: 3%" id="hide-comments">
+        Hide Comments
+      </button>
     </div>
     <div id="config-tab" style="padding: 10px">
       <div
@@ -91,7 +93,8 @@
       </div>
       <div id="config-view-container">
         <h3 style="display: flex">
-          <span style="flex-grow: 1">Configuration</span> <button id="add-new-config">Add</button>
+          <span style="flex-grow: 1">Configuration</span>
+          <button id="add-new-config">Add</button>
         </h3>
         <div id="config-container"></div>
         <ul id="config-list" style="list-style: none; padding: 0"></ul>
