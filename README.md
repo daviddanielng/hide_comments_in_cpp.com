@@ -1,6 +1,8 @@
 # Hide Comments in learncpp.com
 
-A Chrome extension to hide comments on learncpp.com, helping you focus on the content without distractions.
+A Chrome extension to hide specific comments on learncpp.com, helping you focus on the comments that are useful and educative.
+
+> **Note**: Currently hides individual comments based on filters. Hiding the entire comment section is coming soon!
 
 ## Features
 
