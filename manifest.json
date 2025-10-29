@@ -1,6 +1,6 @@
 {
     "manifest_version": 3,
-    "name": "Hide Comments",
+    "name": "Hide Comments In learncpp.com",
     "version": "1.0",
     "description": "A Chrome extension to hide comments on learncpp.com.",
     "permissions": [
@@ -12,7 +12,7 @@
         "service_worker": "background.js"
     },
     "action": {
-        "default_title": "Hide Comments",
+        "default_title": "Hide Comments In learncpp.com",
         "default_popup": "popup.html"
     },
     "icons": {
