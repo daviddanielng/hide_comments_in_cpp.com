@@ -8,7 +8,7 @@ A Chrome extension to hide comments on learncpp.com, helping you focus on the co
 - **Smart Filtering**: Configure which comments to hide based on:
   - **Author Name**: Hide all comments from specific users (exact match)
   - **Comment Content**: Hide comments containing specific text
-- **Auto-Hide**: Automatically hide configured comments when they load
+- **Auto-Hide**: Automatically hide configured comments when they load (disabled by default, enable in Configuration tab)
 - **Easy Configuration**: User-friendly popup interface to manage your filters
 
 ## Installation
@@ -19,17 +19,25 @@ A Chrome extension to hide comments on learncpp.com, helping you focus on the co
 
 1. Download the latest `.crx` file from the [Releases](https://github.com/daviddanielng/hide_comments_in_cpp.com/releases) page
 
-2. Open Chrome and navigate to `chrome://extensions/`
+2. **You will see an error**: "Package is invalid: CRX_REQUIRED_PROOF_MISSING"
 
-3. Enable "Developer mode" in the top right corner
-
-4. Drag and drop the `.crx` file onto the extensions page
-
-5. **You may see a warning**: "Chrome can't verify where this extension comes from"
-
-   - This is normal for extensions not installed from the Chrome Web Store
+   - This is normal for extensions not from the Chrome Web Store
    - You can safely dismiss this warning - the source code is **open source** and available for review
-   - If you don't trust the `.crx` file, you can install from the `.tar.xz` file or from source instead (see options below)
+   - **Workaround**: Download the `.crx` file using a command-line tool instead of your browser:
+     ```bash
+     wget https://github.com/daviddanielng/hide_comments_in_cpp.com/releases/download/v*/hide_comments_in_cpp.com-v*.crx
+     ```
+     or
+     ```bash
+     curl -LO https://github.com/daviddanielng/hide_comments_in_cpp.com/releases/download/v*/hide_comments_in_cpp.com-v*.crx
+     ```
+   - **Alternative**: If you don't want to use the command line, download the `.tar.xz` file or install from source instead (see options below)
+
+3. Open Chrome and navigate to `chrome://extensions/`
+
+4. Enable "Developer mode" in the top right corner
+
+5. Drag and drop the `.crx` file onto the extensions page
 
 6. Click "Add extension" when prompted
 
