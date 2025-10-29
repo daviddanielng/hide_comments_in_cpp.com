@@ -25,9 +25,15 @@ A Chrome extension to hide comments on learncpp.com, helping you focus on the co
 
 4. Drag and drop the `.crx` file onto the extensions page
 
-5. Click "Add extension" when prompted
+5. **You may see a warning**: "Chrome can't verify where this extension comes from"
 
-6. The extension icon should appear in your browser toolbar
+   - This is normal for extensions not installed from the Chrome Web Store
+   - You can safely dismiss this warning - the source code is **open source** and available for review
+   - If you don't trust the `.crx` file, you can install from the `.tar.xz` file or from source instead (see options below)
+
+6. Click "Add extension" when prompted
+
+7. The extension icon should appear in your browser toolbar
 
 #### Using .tar.xz file
 
