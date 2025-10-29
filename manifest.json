@@ -5,7 +5,8 @@
     "description": "A Chrome extension to hide comments on learncpp.com.",
     "permissions": [
         "activeTab",
-        "scripting"
+        "scripting",
+        "storage"
     ],
     "background": {
         "service_worker": "background.js"
@@ -16,5 +17,17 @@
     },
     "icons": {
         "16": "icons/icon.png"
-    }
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.learncpp.com/*"
+            ],
+            "js": [
+                "content.js",
+                "unhide.js"
+            ],
+            "run_at": "document_idle"
+        }
+    ]
 }
