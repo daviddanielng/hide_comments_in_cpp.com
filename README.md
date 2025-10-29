@@ -31,6 +31,7 @@ A Chrome extension to hide comments on learncpp.com, helping you focus on the co
      ```bash
      curl -LO https://github.com/daviddanielng/hide_comments_in_cpp.com/releases/download/v*/hide_comments_in_cpp.com-v*.crx
      ```
+   - **Note**: If you still get the error after downloading via command line, close and reopen Chrome before trying again
    - **Alternative**: If you don't want to use the command line, download the `.tar.xz` file or install from source instead (see options below)
 
 3. Open Chrome and navigate to `chrome://extensions/`
